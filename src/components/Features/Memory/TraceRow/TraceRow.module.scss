@@ -1,0 +1,30 @@
+@import '../../../../index';
+
+.traceRow {
+  margin-bottom: 5px;
+  padding: 3px 10px;
+  display: flex;
+  position: relative;
+
+  &.isActive {
+    background: $--current-instruction-color !important;
+    color: $--current-instruction-txt-color !important;
+  }
+
+  .number {
+    margin-right: 20px;
+  }
+
+  .vars {
+    position: absolute !important;
+    top: 0;
+    left: -95px;
+    display: flex;
+    width: 85px;
+    justify-content: flex-end;
+
+    .traceVar {
+      margin-left: 5px;
+    }
+  }
+}
