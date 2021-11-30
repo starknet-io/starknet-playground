@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="10px" viewBox="0 0 31 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Fill 4</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Lock-Memory-all-challenges-open" transform="translate(-1588.000000, -158.000000)" fill="#474D84">
+            <g id="Group" transform="translate(30.000000, 90.000000)">
+                <g id="buttons" transform="translate(1033.000000, 50.000000)">
+                    <g id="Group-2" transform="translate(0.000000, 15.118118)">
+                        <path d="M541.162639,-7.48270919 C540.890124,-7.80527549 540.408727,-7.81531089 540.124453,-7.50421361 L536.193735,-3.19974556 C535.771129,-2.73668372 536.085143,-1.97542726 536.69934,-1.97256 L539.450774,-1.95750691 L539.450774,22.1813608 C539.450774,22.7827677 539.920413,23.2687676 540.500026,23.2687676 C541.080331,23.2687676 541.54997,22.7827677 541.54997,22.1813608 L541.54997,-1.9467547 L544.293104,-1.9317016 C544.897617,-1.92811753 545.222699,-2.66643595 544.825685,-3.13738275 L541.162639,-7.48270919 Z" id="Fill-4" transform="translate(540.500000, 7.768768) scale(-1, 1) rotate(90.000000) translate(-540.500000, -7.768768) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

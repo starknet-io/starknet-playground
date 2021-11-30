@@ -1,0 +1,12 @@
+$--max-width: 100vw;
+$--header-height: 80;
+$--footer-height: 30;
+$--navbar-height: 40;
+$--navbar-border-height: 2;
+$--header-padding: 10;
+$--header-total-height: $--header-height + $--header-padding;
+$--main-offset: $--header-total-height + $--footer-height;
+
+:export {
+  mainOffset: $--main-offset;
+}

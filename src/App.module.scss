@@ -1,0 +1,8 @@
+@import './index';
+
+.app {
+  width: calc(100vw - 50px);
+  max-width: var($--max-width);
+  margin: auto;
+  color: var($--txt-color);
+}

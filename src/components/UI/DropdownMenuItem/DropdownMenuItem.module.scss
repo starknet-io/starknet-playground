@@ -1,0 +1,25 @@
+@import '../../../index';
+
+.dropdownMenuItem {
+  cursor: pointer;
+  padding: 10px 10px;
+  border-bottom: 1px solid;
+  width: 223px;
+  text-align: left;
+
+  &.isHeader {
+    font-size: small;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-top: 5px;
+    border-top: 2px solid;
+    border-bottom: none;
+    width: 223px;
+    cursor: none;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: $--color-1-active;
+  }
+}
