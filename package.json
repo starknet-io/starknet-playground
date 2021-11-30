@@ -1,0 +1,67 @@
+{
+  "name": "cairo-playground",
+  "version": "0.0.2-0",
+  "homepage": "./",
+  "scripts": {
+    "start": "ESLINT_NO_DEV_ERRORS=true ./scripts/start.bash",
+    "start:starknet": "ESLINT_NO_DEV_ERRORS=true ./scripts/start.bash --starknet-mode",
+    "build": "./scripts/build.bash",
+    "build:starknet": "./scripts/build.bash --starknet-mode",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write \"**/*.+(js|jsx|json|scss|css|md)\"",
+    "release": "standard-version",
+    "release:dry": "standard-version --dry-run",
+    "pre-release": "standard-version --prerelease --skip.changelog"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|jsx)": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ],
+    "*.+(json|scss|css|md)": [
+      "prettier --write"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "codemirror": "^5.62.3",
+    "js-logger": "^1.6.1",
+    "react": "^17.0.2",
+    "react-codemirror2": "^7.2.1",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "react-split-pane": "^2.0.3"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^2.0.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.1",
+    "node-sass": "^6.0.1",
+    "prettier": "^2.3.2",
+    "prop-types": "^15.7.2",
+    "sass-loader": "^12.1.0",
+    "standard-version": "^9.3.1"
+  }
+}

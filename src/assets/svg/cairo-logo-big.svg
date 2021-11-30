@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="260mm" height="180mm" viewBox="0 0 65 58">
+  <defs>
+    <clipPath id="m">
+      <rect x="11.271" y="4.738" width="42.761" height="43.725" fill="none"/>
+    </clipPath>
+  </defs>
+  <title>Artboard 1</title>
+  <g clip-path="url(#m)">
+    <g style="isolation: isolate">
+      <g clip-path="url(#n)">
+        <g clip-path="url(#o)">
+          <g clip-path="url(#p)">
+            <rect x="6.271" y="-0.262" width="60" height="60" fill="#080917"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

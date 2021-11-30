@@ -1,0 +1,18 @@
+[
+  ["Hello Playground", "hello_playground"],
+  ["Output", "output"],
+  ["Functions", "functions"],
+  ["Conditionals", "conditionals"],
+  ["Variables", "variables"],
+  ["Revoked references", "revoked"],
+  ["Dynamic allocation", "allocation"],
+  ["Recursion", "recursion"],
+  ["Field elements", "felt"],
+  ["Field elements 2", "files"],
+  ["Bitwise operations", "bitwise"],
+  ["Address of locals", "local_var_addr"],
+  ["Structs", "structs"],
+  ["Pedersen Hash", "pedersen"],
+  ["Hints", "hints"],
+  ["SHARP", "sharp"]
+]
