@@ -4,7 +4,7 @@ import {apiRequest} from './api-request';
 
 const path = process.env.REACT_APP_STARKNET_ALPHA_SERVICE_URL;
 
-const addTransaction = async contractDefinition => {
+const deploy = async contractDefinition => {
   let data = {
     type: ActionTypes.DEPLOY,
     contract_address_salt: `0x${generateRandomHex(248 / 4)}`,
@@ -25,4 +25,4 @@ const addTransaction = async contractDefinition => {
   };
 };
 
-export {addTransaction};
+export {deploy};

@@ -1,0 +1,10 @@
+@import '../../../../index';
+
+.codeEditor {
+  overflow: auto;
+  font-size: 16px;
+
+  a {
+    color: $--editor-comment-color;
+  }
+}

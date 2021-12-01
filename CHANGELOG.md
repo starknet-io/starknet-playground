@@ -16,9 +16,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 0.0.3 (2021-11-30)
 
-
 ### Bug Fixes
 
-* push ci ([5048479](https://github.com/dan-ziv/cairo-playground/commit/5048479d9f267ea61a5b5f3c1f27fa1f61109018))
+- push ci ([5048479](https://github.com/dan-ziv/cairo-playground/commit/5048479d9f267ea61a5b5f3c1f27fa1f61109018))
 
 ### 0.0.2 (2021-11-30)
