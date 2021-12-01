@@ -1,0 +1,29 @@
+@import '../../../../index';
+
+.editorButtons {
+  padding: 10px 10px 0 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $--button-disabled-color;
+    margin: 10px 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .left {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .right {
+    float: right;
+  }
+}
