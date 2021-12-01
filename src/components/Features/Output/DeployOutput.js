@@ -3,7 +3,7 @@ import React from 'react';
 
 const CONTRACT_URL = 'https://voyager.online/contract/';
 const TX_URL = 'https://voyager.online/tx/';
-const STRINGS = [
+const DEPLOY_MSG_PARTS = [
   'The deployment transaction was sent.',
   'Contract address:',
   'Transaction hash:',
@@ -13,9 +13,9 @@ const STRINGS = [
 const DeployOutput = ({address, txHash}) => {
   return (
     <>
-      {'> '} {STRINGS[0]}
+      {'> '} {DEPLOY_MSG_PARTS[0]}
       <br />
-      &nbsp;&nbsp;{STRINGS[1]}{' '}
+      &nbsp;&nbsp;{DEPLOY_MSG_PARTS[1]}{' '}
       <a
         href={`${CONTRACT_URL}${address}`}
         rel="noreferrer"
@@ -24,13 +24,13 @@ const DeployOutput = ({address, txHash}) => {
         {address}
       </a>
       <br />
-      &nbsp;&nbsp;{STRINGS[2]}{' '}
+      &nbsp;&nbsp;{DEPLOY_MSG_PARTS[2]}{' '}
       <a href={`${TX_URL}${txHash}`} rel="noreferrer" target="_blank">
         {txHash}
       </a>
       <br />
       &nbsp;&nbsp;
-      {STRINGS[3]}
+      {DEPLOY_MSG_PARTS[3]}
     </>
   );
 };

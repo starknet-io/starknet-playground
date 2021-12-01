@@ -9,7 +9,9 @@
 <!-- tag line -->
 <h2 align='center'>Cairo Playground</h2>
 <h4 align='center'>
-<a href="https://starknet.io/playground">https://starknet.io/playground
+Cairo version: <a href="https://cairo-lang.org/playground"> https://cairo-lang.org/playground </a>
+<br/>
+StarkNet version: <a href="https://starknet.io/playground"> https://starknet.io/playground </a>
 </h4>
 
 <!-- primary badges -->
