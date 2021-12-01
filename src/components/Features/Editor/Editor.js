@@ -12,7 +12,7 @@ import {
   run
 } from '../../../api/playground';
 import {addJob} from '../../../api/sharp';
-import {addTransaction} from '../../../api/starknet';
+import {deploy} from '../../../api/starknet';
 import {ProgramContext} from '../../../context/program/program-context';
 import {TabsContext} from '../../../context/tabs/tabs-context';
 import {promiseHandler} from '../../../utils/promise-handler';
@@ -283,15 +283,15 @@ const Editor = ({filePath}) => {
       program.addOutput(error.message, true);
       program.setIsRunning(false);
     } else {
-      return addTransactionHandler(response);
+      return doDeploy(response);
     }
   };
 
-  const addTransactionHandler = async compileResponse => {
+  const doDeploy = async compileResponse => {
     const {contractDefinition} = compileResponse;
     program.addOutput(DEPLOYING_MSG);
     const [response, error] = await promiseHandler(
-      addTransaction(contractDefinition)
+      deploy(contractDefinition)
     );
     if (error) {
       DEPLOY_FAILED_MSG.push(error.message);
@@ -306,6 +306,7 @@ const Editor = ({filePath}) => {
     }
     program.setIsRunning(false);
   };
+
   return (
     <>
       <div className={styles.editor}>
