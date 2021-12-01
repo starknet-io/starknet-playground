@@ -1,0 +1,37 @@
+@import '../../../index';
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  &.main {
+    .emptyContainer {
+      height: 100%;
+      border: 2px solid $--box-focus-border-color;
+      display: flex;
+      flex-direction: column;
+
+      .logoWrapper {
+        margin: auto;
+        filter: saturate(0.5) opacity(0.5);
+      }
+
+      .emptyText {
+        margin: -70px auto auto auto;
+        display: flex;
+        font-size: 24px;
+        color: $--box-focus-border-color;
+      }
+    }
+
+    .plus {
+      margin: 8px 5px 0 5px;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(1.3);
+      }
+    }
+  }
+}
