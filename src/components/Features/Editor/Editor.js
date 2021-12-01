@@ -26,6 +26,9 @@ import {CodeEditor} from './CodeEditor/CodeEditor';
 import styles from './Editor.module.scss';
 import {EditorButtons} from './EditorButtons/EditorButtons';
 
+const SCROLL_MARGIN_TOP = 32;
+const SCROLL_MARGIN_BOTTOM = 50;
+const PADDING_MARGIN_BOTTOM = 62;
 const EDITOR_TITLE_TXT = 'editor';
 const COMPILING_MSG = 'Compiling...';
 const COMPILE_MSG = 'The contract was compiled successfully.';
@@ -96,24 +99,28 @@ const Editor = ({filePath}) => {
       const targetRect = target.getBoundingClientRect();
       const scrollParent = codeEditorRef.current.ref.parentNode;
       const scrollParentRect = scrollParent.getBoundingClientRect();
-      if (targetRect.bottom > scrollParentRect.bottom - 50) {
-        const scrollMargin = 50 + 64;
+      if (
+        targetRect.bottom >
+        scrollParentRect.bottom - SCROLL_MARGIN_BOTTOM
+      ) {
         const targetBottom =
           scrollParent.scrollTop +
           targetRect.bottom -
           scrollParentRect.bottom;
         scrollParent.scrollTo({
-          top: targetBottom + scrollMargin,
+          top:
+            targetBottom +
+            SCROLL_MARGIN_BOTTOM +
+            PADDING_MARGIN_BOTTOM,
           behavior: 'smooth'
         });
       } else if (targetRect.top < scrollParentRect.top) {
-        const scrollMargin = 32;
         const targetTop =
           scrollParent.scrollTop +
           targetRect.top -
           scrollParentRect.top;
         scrollParent.scrollTo({
-          top: targetTop - scrollMargin,
+          top: targetTop - SCROLL_MARGIN_TOP,
           behavior: 'smooth'
         });
       }
