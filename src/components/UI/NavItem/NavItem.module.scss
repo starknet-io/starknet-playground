@@ -1,0 +1,32 @@
+@import '../../../index';
+
+.navItem {
+  color: $--color-1;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding-left: 10px;
+
+  &:hover {
+    background-color: $--bg-color-memory;
+  }
+
+  &.isActive {
+    background-color: $--bg-color-editor;
+    border-bottom: 3px solid $--color-5-active;
+    cursor: default;
+  }
+
+  svg {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}
