@@ -2,7 +2,7 @@
 # are equal or differ only in sign and 0 otherwise.
 # Its current implementation is incorrect.
 #
-# 1. Click on "Run" to see the where it fails.
+# 1. Click on "Run" to see where it fails.
 # 2. Fix the body of `abs_eq`, so that the
 #    program terminates successfully.
 
