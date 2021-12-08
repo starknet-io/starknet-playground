@@ -82,7 +82,7 @@ Your app is ready to be deployed!
 
 `.env` files are increasingly popular as a way to configure an application. Their values are injected into the
 application bundle during build time.\
-The appropriate files are loading according to the `NODE_ENV` value.\
+The appropriate files are loaded according to the `NODE_ENV` value.\
 `.env` (global values for all environments)\
 `.env.development` (values for development env, i.e `NODE_ENV=development`)\
 `.env.test` (values for testing env, i.e, `NODE_ENV=test`)\
