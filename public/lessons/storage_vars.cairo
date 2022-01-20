@@ -24,7 +24,7 @@ end
 # given amount (note that we don't check that amount is positive).
 #
 # Complete the missing line and deploy the contract.
-# You can interact with it using [Voyager](https://voyager.online/).
+# You can interact with it using [Voyager](https://goerli.voyager.online/).
 @external
 func increase_balance{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
         user_id : felt, amount : felt):
