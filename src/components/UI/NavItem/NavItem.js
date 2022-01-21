@@ -19,7 +19,7 @@ const NavItem = ({
   ].join(' ');
   const handleKeyPress = event => {
     if (event?.key === 'Enter') {
-      onBlur(tabNameInput);
+      handleBlur(tabNameInput);
     }
   };
   const editingStateStyle = {
@@ -33,6 +33,14 @@ const NavItem = ({
       ? (tabNameInput.length * 0.75).toFixed(0)
       : 5;
   };
+  const handleBlur = tabNameInput => {
+    if (tabNameInput) {
+      onBlur(tabNameInput);
+    } else {
+      setTabNameInput(text);
+      onBlur(text);
+    }
+  };
 
   return (
     <button className={classes} onClick={onClick}>
@@ -44,7 +52,7 @@ const NavItem = ({
           size={getInputSize()}
           style={isEditable ? editingStateStyle : viewingStateStyle}
           value={tabNameInput}
-          onBlur={() => onBlur(tabNameInput)}
+          onBlur={() => handleBlur(tabNameInput)}
           onChange={e => setTabNameInput(e.target.value)}
           onKeyPress={e => handleKeyPress(e)}
         />
