@@ -1,6 +1,6 @@
 {
   "name": "cairo-playground",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "./",
   "scripts": {
     "start": "ESLINT_NO_DEV_ERRORS=true ./scripts/start.bash",
@@ -14,7 +14,7 @@
     "format": "prettier --write \"**/*.+(js|jsx|json|scss|css|md)\"",
     "release": "standard-version",
     "release:dry": "standard-version --dry-run",
-    "pre-release": "standard-version --prerelease --skip.changelog"
+    "pre-release": "standard-version --prerelease --skip.changelog --releaseCommitMessageFormat 'chore(prerelease): {{currentTag}}'"
   },
   "husky": {
     "hooks": {
