@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/starkware-libs/cairo-playground/compare/v0.0.5-0...v0.0.5) (2022-05-12)
+
 ### [0.0.4](https://github.com/starkware-libs/cairo-playground/compare/v0.0.3...v0.0.4) (2022-02-08)
 
 ### [0.0.3](https://github.com/starkware-libs/cairo-playground/compare/v0.0.3-2...v0.0.3) (2022-02-08)
