@@ -8,7 +8,7 @@
 
 from starkware.cairo.common.math import assert_nn
 
-func main(output_ptr : felt*, range_check_ptr) -> (output_ptr : felt*, range_check_ptr):
+func main(output_ptr : felt*, range_check_ptr) -> (output_ptr : felt*, range_check_ptr : felt):
     alloc_locals
     local x
     local y

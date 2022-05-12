@@ -23,7 +23,7 @@
 from starkware.cairo.common.serialize import serialize_word
 
 # Computes base^exp.
-func pow(base : felt, exp : felt) -> (res):
+func pow(base : felt, exp : felt) -> (res : felt):
     if exp == 0:
         return (res=1)
     end

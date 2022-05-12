@@ -20,7 +20,8 @@ func main{output_ptr : felt*, pedersen_ptr : HashBuiltin*, ecdsa_ptr : Signature
         x,
         124221662027375191599785306371100866827147974414679244246692561282978781776,
         signature_r,
-        signature_s)
+        signature_s,
+    )
 
     assert [output_ptr] = your_eth_addr
     let output_ptr = output_ptr + 1

@@ -14,7 +14,8 @@ end
 
 @view
 func get_balance{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
-        user_id : felt) -> (res : felt):
+    user_id : felt
+) -> (res : felt):
     # To read from the storage variable use balance.read().
     let (current_balance) = balance.read(user_id=user_id)
     return (res=current_balance)
@@ -27,7 +28,8 @@ end
 # You can interact with it using [Voyager](https://goerli.voyager.online/).
 @external
 func increase_balance{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
-        user_id : felt, amount : felt):
+    user_id : felt, amount : felt
+):
     # Use balance.read to read the current balance into current_balance.
     # WRITE YOUR CODE HERE.
 
