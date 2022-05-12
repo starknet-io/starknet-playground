@@ -21,7 +21,7 @@ from starkware.cairo.common.serialize import serialize_word
 
 # Computes the square root (over the integers) of `n`.
 # Prover assumption: The square root exists.
-func sqrt(n) -> (res):
+func sqrt(n) -> (res : felt):
     alloc_locals
     local res
 

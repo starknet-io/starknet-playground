@@ -20,7 +20,7 @@ struct Character:
     member resolve : felt
 end
 
-func merge_value{range_check_ptr}(a, b, seed) -> (seed, res):
+func merge_value{range_check_ptr}(a, b, seed) -> (seed : felt, res : felt):
     alloc_locals
     let (local seed, r) = unsigned_div_rem(seed, 3)
     let (res, _) = signed_div_rem(a + b + 2 * r - 2, 2, 2 * BOUND)
@@ -61,7 +61,8 @@ func merge{range_check_ptr}(a : Character*, b : Character*, seed) -> (merged : C
 end
 
 func add_new_characters{pedersen_ptr : HashBuiltin*, range_check_ptr}(
-        seed, characters : Character**, n_characters, n_new_characters):
+    seed, characters : Character**, n_characters, n_new_characters
+):
     if n_new_characters == 0:
         return ()
     end
@@ -86,7 +87,8 @@ func add_new_characters{pedersen_ptr : HashBuiltin*, range_check_ptr}(
         seed=seed,
         characters=characters,
         n_characters=n_characters + 1,
-        n_new_characters=n_new_characters - 1)
+        n_new_characters=n_new_characters - 1,
+    )
 end
 
 func main{output_ptr, pedersen_ptr : HashBuiltin*, range_check_ptr}():
@@ -106,7 +108,8 @@ func main{output_ptr, pedersen_ptr : HashBuiltin*, range_check_ptr}():
     local n_new_characters
     assert_nn_le(n_new_characters, 30)
     add_new_characters(
-        seed=0, characters=characters, n_characters=2, n_new_characters=n_new_characters)
+        seed=0, characters=characters, n_characters=2, n_new_characters=n_new_characters
+    )
 
     let last_character = [characters + 1 + n_new_characters]
     assert last_character.strength = 5

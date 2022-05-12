@@ -16,7 +16,7 @@
 from starkware.cairo.common.registers import get_fp_and_pc
 
 # Returns a^3 for a != 0 and 1 otherwise.
-func foo(a) -> (res):
+func foo(a) -> (res : felt):
     if a == 0:
         return (res=1)
     else:
