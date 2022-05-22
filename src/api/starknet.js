@@ -4,11 +4,11 @@ import {apiRequest} from './api-request';
 
 const path = process.env.REACT_APP_STARKNET_ALPHA_SERVICE_URL;
 
-const deploy = async contractDefinition => {
+const deploy = async contractClass => {
   let data = {
     type: ActionTypes.DEPLOY,
     contract_address_salt: `0x${generateRandomHex(248 / 4)}`,
-    contract_definition: contractDefinition,
+    contract_class: contractClass,
     constructor_calldata: []
   };
   const [response, error] = await apiRequest({
