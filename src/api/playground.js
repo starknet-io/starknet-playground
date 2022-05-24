@@ -78,7 +78,7 @@ const compile = async code => {
   }
   return {
     contractAddress: response.address,
-    contractDefinition: response.contract_definition
+    contractClass: response.contract_class
   };
 };
 
