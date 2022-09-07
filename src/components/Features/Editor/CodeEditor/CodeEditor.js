@@ -13,7 +13,7 @@ CodeMirror.defineSimpleMode(AppModes.CAIRO, {
   start: [
     {
       regex:
-        /(?:func|struct|namespace|end|call|ret|jmp|if|let|const|import|from|as|abs|rel|local|static_assert|tempvar|return|assert|member|felt|cast|else|alloc_locals|with|nondet|with_attr)\b/,
+        /(?:func|struct|namespace|call|ret|jmp|if|let|const|import|from|as|abs|rel|local|static_assert|tempvar|return|assert|felt|cast|else|alloc_locals|with|with_attr|nondet|dw|codeoffset|new|using|and)\b/,
       token: 'keyword'
     },
     {regex: /ap|fp/, token: 'atom'},
