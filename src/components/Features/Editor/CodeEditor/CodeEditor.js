@@ -21,7 +21,7 @@ CodeMirror.defineSimpleMode(AppModes.CAIRO, {
       regex: /-?[0-9]+/,
       token: 'number'
     },
-    {regex: /#.*/, token: 'comment'},
+    {regex: /\/\/.*/, token: 'comment'},
     {regex: /[-+*=<>!]+/, token: 'operator'},
     {regex: /[a-zA-Z_][a-zA-Z_0-9]*/, token: 'variable'},
     {
@@ -32,7 +32,7 @@ CodeMirror.defineSimpleMode(AppModes.CAIRO, {
   ],
   meta: {
     dontIndentStates: ['comment'],
-    lineComment: '#'
+    lineComment: '//'
   }
 });
 
