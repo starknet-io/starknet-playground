@@ -5,7 +5,7 @@
 // If you want to install it, you can read the instructions [here](https://www.cairo-lang.org/docs/quickstart.html).
 //
 // On the top-right corner, you should see the "Challenges" button.
-// The challenges provide hands-on exercises that teach you how to write code in Cairo.
+// The lessons provide hands-on exercises that teach you how to write code in Cairo.
 // For more information, you can read the two tutorials: "Hello Cairo" and
 // "How Cairo Works", which can be found [here](https://www.cairo-lang.org/docs/).
 //
@@ -26,7 +26,7 @@
 //    to the memory. Find the memory row with that address and verify that you
 //    see the 3 output values in the right column.
 //
-// See you in the next challenge!
+// See you in the next lesson!
 
 // Use the output builtin.
 %builtins output

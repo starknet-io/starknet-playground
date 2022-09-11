@@ -23,7 +23,7 @@
 // The behavior of the code doesn't change. This is because
 // the keyword `local` allocates a new variables for the
 // intermediate values as well. The main difference between
-// `local` and `tempvar` is explained in the next challenge.
+// `local` and `tempvar` is explained in the next lesson.
 
 // Use the output builtin.
 %builtins output

@@ -11,7 +11,7 @@
 //    to 1234.
 // 3. Uncomment the line calling foo() and try to run the code.
 //    Fix the code by adding exactly one word to it.
-//    Hint: Revisit the "Revoked references" challenge.
+//    Hint: Revisit the "Revoked references" lesson.
 
 from starkware.cairo.common.registers import get_fp_and_pc
 

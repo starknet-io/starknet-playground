@@ -1,4 +1,4 @@
-// As you saw in the previous challenge, the operator '/' does not denote
+// As you saw in the previous lesson, the operator '/' does not denote
 // truncated (i.e., rounding down) integer division as in other programming
 // languages. Instead, one can use library functions such as
 // unsigned_div_rem().

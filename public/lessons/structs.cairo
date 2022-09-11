@@ -1,4 +1,4 @@
-// In this challenge you're going to implement a stack using a linked list.
+// In this lesson you're going to implement a stack using a linked list.
 //
 // Add the missing code so that main() runs successfully.
 

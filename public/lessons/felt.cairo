@@ -9,7 +9,7 @@
 // The most important difference between integers and field elements is division:
 // Division of field elements (and therefore division in Cairo) is not the
 // integer division you may be used to.
-// In the next challenge, you'll see how to use unsigned_div_rem()
+// In the next lesson, you'll see how to use unsigned_div_rem()
 // for truncated (i.e., rounding down) integer division.
 //
 // Make the code below output the results of the following expressions:
