@@ -10,7 +10,7 @@
 //
 // Note: Don't use starkware.cairo.common.hash_chain (it computes the chain differently).
 
-// Use the pedersen builtin.
+// Use the Pedersen builtin.
 %builtins pedersen
 
 from starkware.cairo.common.alloc import alloc
