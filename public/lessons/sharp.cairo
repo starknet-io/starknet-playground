@@ -1,5 +1,5 @@
-// The program below lets you to choose a number x and output its square y = x*x
-// (proving that you know the square root of y).
+// The program below lets you choose a number `x` and output its square `y = x*x`
+// (proving that you know the square root of `y`).
 //
 // 1. Replace "YOUR_NUMBER" with a value of your choice, run the program and
 //    make sure you get the expected output (the square of the value you chose).
@@ -10,7 +10,7 @@
 // 2. The compiled program does not include the [hints](https://cairo-lang.org/docs/how_cairo_works/hints.html),
 //    so changing any code within a hint does not change the resulting program
 //    hash.
-//    Try changing x to a different number and note that the program hash remains
+//    Try changing `x` to a different number and note that the program hash remains
 //    unchanged after rerunning.
 //
 // The Cairo SHARP collects several programs and creates a proof that they ran
@@ -27,7 +27,7 @@
 //
 // 4. You can monitor the status of your job, using the link in the output pane.
 //
-// For each job the corresponding fact is computed as follows:
+// For each job, the corresponding fact is computed as follows:
 //   keccak(program_hash, keccak(program_output))
 // where:
 // * program_hash is the hash of the compiled program, which you can find in
@@ -47,7 +47,7 @@
 //     Web3.solidityKeccak(['uint256[]'], [program_output])
 //   ])
 //
-// You can also find your job's fact in SHARP tracking page you opened
+// You can also find your job's fact in the SHARP tracking page you opened
 // in step 4.
 //
 // 5. Once you see that the fact is registered, you can call the

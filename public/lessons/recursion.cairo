@@ -16,7 +16,7 @@ func compute_sum(n: felt) -> (sum: felt) {
         return (sum=0);
     }
 
-    // Otherwise, call `compute_sum` recursively to compute 1 + 2 + ... + (n-1)
+    // Otherwise, call `compute_sum` recursively to compute 1 + 2 + ... + (n-1).
     let (sum) = compute_sum(n=n - 1);
     // Add the new value `n` to the sum.
     let new_sum = sum + n;

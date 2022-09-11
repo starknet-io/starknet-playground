@@ -11,17 +11,13 @@
 //    For more information on how to write Cairo contracts see the
 //    ["Hello StarkNet" tutorial](https://cairo-lang.org/docs/hello_starknet).
 // 2. Click on the contract address in the output pane to open
-//    [Voyager](https://voyager.online/) - the StarkNet block explorer.
+//    [Voyager](https://goerli.voyager.online/) - the StarkNet block explorer.
 // 3. Wait for the page to load the information
 //    (it may take a few minutes until a block is created).
 // 4. In the "STATE" tab, you can call the "add()" transaction.
 
 // The "%lang" directive declares this code as a StarkNet contract.
 %lang starknet
-
-// The "%builtins" directive declares the builtins used by the contract.
-// For example, the "range_check" builtin is used to compare values.
-%builtins range_check
 
 @view
 func add(x: felt, y: felt) -> (res: felt) {

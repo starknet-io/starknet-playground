@@ -7,7 +7,7 @@
 //
 // 1. Try to run the code as-is, and make sure you understand the error.
 // 2. Uncomment the line setting __fp__, and run again.
-//    The code should now work and you should be able to see that x was set
+//    The code should now work and you should be able to see that `x` was set
 //    to 1234.
 // 3. Uncomment the line calling foo() and try to run the code.
 //    Fix the code by adding exactly one word to it.

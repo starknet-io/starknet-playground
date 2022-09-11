@@ -2,8 +2,8 @@
 // functions and temporary variables) is somewhat restricted.
 // For example, a call to another function may revoke those references.
 //
-// 1. Try to run the following code. You should get an error that x was revoked
-//    (this is because of the second call to foo).
+// 1. Try to run the following code. You should get an error that `x` was revoked
+//    (this is because of the second call to `foo`).
 // 2. In simple cases, like this one, the compiler can solve this automatically
 //    if the "alloc_locals" keyword is used within the function's scope.
 //    Add "alloc_locals;" to the beginning of main(), and make sure the code works.

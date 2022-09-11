@@ -3,7 +3,7 @@
 // The idea is that the verifier only needs to be convinced that res * res = n,
 // it doesn't really care how res was computed.
 // In such cases, we don't have to compute res in pure Cairo - we can write a
-// piece of python code inside the Cairo program, which is called a "hint".
+// piece of Python code inside the Cairo program, which is called a "hint".
 // A hint is a piece of code that the prover runs to initialize
 // some memory cells. Note that it is completely transparent from the verifier's
 // point of view, so the result of the hint *must* be verified using pure Cairo
@@ -25,7 +25,7 @@ func sqrt(n) -> (res: felt) {
     alloc_locals;
     local res;
 
-    // Set the value of res using a python hint.
+    // Set the value of res using a Python hint.
     %{
         import math
 
