@@ -1,6 +1,6 @@
 {
   "name": "cairo-playground",
-  "version": "0.0.7",
+  "version": "0.0.8-dev.1",
   "homepage": "./",
   "scripts": {
     "start": "ESLINT_NO_DEV_ERRORS=true ./scripts/start.bash",
