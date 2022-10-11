@@ -1,7 +1,11 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "node": true,
+    "amd": true,
+    "es6": true,
+    "es2020": true,
+    "jquery": false
   },
   "globals": {
     "process": true,
