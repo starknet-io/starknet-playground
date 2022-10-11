@@ -45,8 +45,7 @@ jobs:
         with:
           token: ${{ secrets.USER_TOKEN }}
           tag_name: ${{ steps.get-release-data.outputs.tag }}
-          prerelease: ${{ contains(steps.get-release-data.outputs.tag, '-') }}
-          generate_release_notes: true
+          generate_release_notes: false
           draft: false
           files: |
             ${{ steps.get-release-data.outputs.cairoFile }}.zip
