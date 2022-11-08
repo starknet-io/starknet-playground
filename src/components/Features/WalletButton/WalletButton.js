@@ -13,7 +13,7 @@ export const WalletButtonIconSize = {
   LARGE: 30
 };
 
-const CONNECT_WALLET_BTN_TXT = 'Connect Starknet Wallet';
+const CONNECT_WALLET_BTN_TXT = 'Connect StarkNet Wallet';
 
 export const WalletButton = ({
   account,
