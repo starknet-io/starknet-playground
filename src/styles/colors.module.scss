@@ -37,6 +37,11 @@ $--editor-hint-color: #28286e;
 $--editor-hint-active-bg-color: #6b75e3;
 $--editor-hint-active-color: #fafaf5;
 $--editor-code-bg-color: #232752;
+$--color-orange-soda: #f6643c;
+$--color-white: #fff;
+$--color-dark-blue-gray: #65668c;
+$--color-indigo: #292c6c;
+$--color-light-steel-blue: #b3b8db;
 
 :export {
   color1: $--color-1;
@@ -51,4 +56,8 @@ $--editor-code-bg-color: #232752;
   color5Hover: $--color-5-hover;
   color3Hover: $--color-3-hover;
   color4Hover: $--color-4-hover;
+  colorOrangeSoda: $--color-orange-soda;
+  colorWhiteOp10: rgba($--color-white, 0.1);
+  colorWhite: $--color-white;
+  colorDarkBlueGray: $--color-dark-blue-gray;
 }

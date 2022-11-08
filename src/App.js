@@ -5,6 +5,7 @@ import {Header} from './components/Containers/Header/Header';
 import {Main} from './components/Containers/Main/Main';
 import {AppContext} from './context/app/app-context';
 import {TabsProvider} from './context/tabs/TabsProvider';
+import {WalletProvider} from './context/wallet/WalletProvider';
 
 const App = () => {
   const {isCairoMode} = useContext(AppContext);
@@ -21,8 +22,10 @@ const App = () => {
   return (
     <div className={styles.app}>
       <TabsProvider>
-        <Header />
-        <Main />
+        <WalletProvider>
+          <Header />
+          <Main />
+        </WalletProvider>
       </TabsProvider>
       <Footer />
     </div>
