@@ -1,6 +1,6 @@
 import {WalletStatus} from '@starkware-industries/commons-js-enums';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useWallet} from '../../../context/wallet/wallet-hooks';
 import {WalletButton} from './WalletButton';
 
@@ -9,9 +9,14 @@ export const NetworkWalletButton = ({
   chain,
   logoPath,
   network,
-  status
+  status,
+  error
 }) => {
   const {connectWallet} = useWallet();
+
+  useEffect(() => {
+    error && handleWalletError(error);
+  }, [error]);
 
   const handleWalletButtonClick = () => {
     switch (status) {
@@ -29,6 +34,10 @@ export const NetworkWalletButton = ({
     connectWallet({
       id: 'gsw'
     });
+  };
+
+  const handleWalletError = () => {
+    console.error(error.name);
   };
 
   return (
