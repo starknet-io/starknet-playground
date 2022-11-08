@@ -261,7 +261,8 @@ func main{output_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}():
 
     let (local squashed_dict : DictAccess*) = alloc()
     let (squashed_dict_end) = squash_dict(
-        dict_accesses=state_start, dict_accesses_end=state, squashed_dict=squashed_dict)
+        dict_accesses=state_start, dict_accesses_end=state, squashed_dict=squashed_dict
+    )
     assert squashed_dict_end = squashed_dict + DictAccess.SIZE * 48
     local range_check_ptr = range_check_ptr
 

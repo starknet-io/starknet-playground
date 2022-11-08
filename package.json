@@ -1,6 +1,6 @@
 {
   "name": "cairo-playground",
-  "version": "0.0.3-2",
+  "version": "0.0.8",
   "homepage": "./",
   "scripts": {
     "start": "ESLINT_NO_DEV_ERRORS=true ./scripts/start.bash",
@@ -12,9 +12,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write \"**/*.+(js|jsx|json|scss|css|md)\"",
-    "release": "standard-version",
-    "release:dry": "standard-version --dry-run",
-    "pre-release": "standard-version --prerelease --skip.changelog"
+    "release": "semantic-release",
+    "release:dry": "semantic-release --no-ci --dry-run"
   },
   "husky": {
     "hooks": {
@@ -52,7 +51,13 @@
     "react-split-pane": "^2.0.3"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/commit-analyzer": "^9.0.1",
+    "@semantic-release/git": "^10.0.0",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.2",
     "@trivago/prettier-plugin-sort-imports": "^2.0.4",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react-hooks": "^4.2.0",
@@ -62,6 +67,6 @@
     "prettier": "^2.3.2",
     "prop-types": "^15.7.2",
     "sass-loader": "^12.1.0",
-    "standard-version": "^9.3.1"
+    "semantic-release": "^19.0.2"
   }
 }

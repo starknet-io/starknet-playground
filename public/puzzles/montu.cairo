@@ -9,7 +9,8 @@ from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.cairo.common.hash_state import HashState, hash_finalize, hash_init, hash_update
 
 func compute_next_layer(
-        input : felt*, output : felt*, length : felt, alpha : felt, x : felt, g : felt):
+    input : felt*, output : felt*, length : felt, alpha : felt, x : felt, g : felt
+):
     tempvar a = [input]
     tempvar b = [input + length]
     assert [output] = (a + b) / 2 + alpha * (a - b) / (2 * x)
@@ -17,11 +18,13 @@ func compute_next_layer(
         return ()
     end
     return compute_next_layer(
-        input=input + 1, output=output + 1, length=length, alpha=alpha, x=x * g, g=g)
+        input=input + 1, output=output + 1, length=length, alpha=alpha, x=x * g, g=g
+    )
 end
 
 func verify{hash_ptr : HashBuiltin*, hash_state_ptr : HashState*}(
-        input : felt*, length : felt, g : felt):
+    input : felt*, length : felt, g : felt
+):
     alloc_locals
 
     if length == 2:
@@ -31,7 +34,8 @@ func verify{hash_ptr : HashBuiltin*, hash_state_ptr : HashState*}(
 
     # Compute alpha.
     let (hash_state_ptr) = hash_update(
-        hash_state_ptr=hash_state_ptr, data_ptr=input, data_length=length)
+        hash_state_ptr=hash_state_ptr, data_ptr=input, data_length=length
+    )
     let (alpha) = hash_finalize(hash_state_ptr=hash_state_ptr)
     local hash_ptr : HashBuiltin* = hash_ptr
     local hash_state_ptr : HashState* = hash_state_ptr
@@ -88,7 +92,8 @@ func main{output_ptr : felt*, pedersen_ptr : HashBuiltin*}():
     let (hash_state_ptr) = hash_init()
 
     verify{hash_ptr=pedersen_ptr, hash_state_ptr=hash_state_ptr}(
-        input=modified_input, length=LENGTH, g=G)
+        input=modified_input, length=LENGTH, g=G
+    )
 
     let output_ptr = output_ptr + 1
     return ()
