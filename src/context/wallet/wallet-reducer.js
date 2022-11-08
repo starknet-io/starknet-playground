@@ -1,8 +1,8 @@
 import {WalletStatus} from '@starkware-industries/commons-js-enums';
 
 export const actions = {
-  UPDATE_WALLET: 'Wallets/UPDATE_WALLET',
-  SET_WALLET_CONFIG: 'Wallets/SET_WALLET_CONFIG'
+  UPDATE_WALLET: 'Wallet/UPDATE_WALLET',
+  SET_WALLET_CONFIG: 'Wallet/SET_WALLET_CONFIG'
 };
 
 export const initialState = {
