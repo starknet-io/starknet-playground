@@ -11,6 +11,7 @@ import {
   getStarknet
 } from '@starkware-industries/commons-js-libs/get-starknet';
 import {useState} from 'react';
+import {getLogger} from '../utils/logger';
 
 export const useStarknetWallet = () => {
   const AUTO_CONNECT = process.env.REACT_APP_AUTO_CONNECT;
@@ -19,6 +20,7 @@ export const useStarknetWallet = () => {
   const [chainId, setChainId] = useState('');
   const [chainName, setChainName] = useState('');
   const [status, setStatus] = useState(WalletStatus.DISCONNECTED);
+  const logger = getLogger('UseStarknetWallet');
 
   const connect = async walletConfig => {
     try {
@@ -80,7 +82,9 @@ export const useStarknetWallet = () => {
       setError(null);
     } else {
       setStatus(WalletStatus.ERROR);
-      setError({name: WalletErrorType.CHAIN_UNSUPPORTED_ERROR});
+      const err = {name: WalletErrorType.CHAIN_UNSUPPORTED_ERROR};
+      setError(err);
+      logger.error(err);
     }
   };
 
