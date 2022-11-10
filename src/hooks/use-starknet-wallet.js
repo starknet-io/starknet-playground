@@ -1,6 +1,7 @@
 import {
   ChainInfo,
   ChainType,
+  ChainTypeL2,
   WalletErrorType,
   WalletStatus
 } from '@starkware-industries/commons-js-enums';
@@ -13,7 +14,6 @@ import {useState} from 'react';
 
 export const useStarknetWallet = () => {
   const AUTO_CONNECT = process.env.REACT_APP_AUTO_CONNECT;
-  const SUPPORTED_CHAIN_ID = process.env.REACT_APP_SUPPORTED_CHAIN_ID;
   const [error, setError] = useState(null);
   const [account, setAccount] = useState('');
   const [chainId, setChainId] = useState('');
@@ -69,7 +69,7 @@ export const useStarknetWallet = () => {
     const chainId = getCurrentChainId();
     setChainId(chainId);
     setChainName(ChainInfo.L2[chainId].NAME);
-    if (chainId === SUPPORTED_CHAIN_ID) {
+    if (chainId === ChainTypeL2.GOERLI) {
       const {selectedAddress} = getStarknet();
       setAccount(selectedAddress);
       setStatus(

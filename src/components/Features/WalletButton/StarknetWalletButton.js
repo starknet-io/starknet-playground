@@ -1,5 +1,6 @@
 import {
   ChainInfo,
+  ChainTypeL2,
   NetworkType
 } from '@starkware-industries/commons-js-enums';
 import {addAddressPadding} from '@starkware-industries/commons-js-libs/starknet';
@@ -10,13 +11,10 @@ import {NetworkWalletButton} from './NetworkWalletButton';
 export const StarknetWalletButton = () => {
   const {account, config, error, status} = useWallet();
 
-  const SUPPORTED_L2_CHAIN_ID =
-    process.env.REACT_APP_SUPPORTED_CHAIN_ID;
-
   return (
     <NetworkWalletButton
       account={addAddressPadding(account)}
-      chain={ChainInfo.L2[SUPPORTED_L2_CHAIN_ID].NAME}
+      chain={ChainInfo.L2[ChainTypeL2.GOERLI].NAME}
       error={error}
       logoPath={config?.logoPath || ''}
       network={NetworkType.L2}
