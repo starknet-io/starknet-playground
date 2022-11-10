@@ -2,7 +2,6 @@ import {WalletStatus} from '@starkware-industries/commons-js-enums';
 import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
 import {useWallet} from '../../../context/wallet/wallet-hooks';
-import {getLogger} from '../../../utils/logger';
 import {WalletButton} from './WalletButton';
 
 export const NetworkWalletButton = ({
@@ -14,7 +13,6 @@ export const NetworkWalletButton = ({
   error
 }) => {
   const {connectWallet} = useWallet();
-  const logger = getLogger('NetworkWalletButton');
 
   useEffect(() => {
     error && handleWalletError(error);
@@ -39,7 +37,7 @@ export const NetworkWalletButton = ({
   };
 
   const handleWalletError = () => {
-    logger.error(error);
+    console.error(error.name);
   };
 
   return (
