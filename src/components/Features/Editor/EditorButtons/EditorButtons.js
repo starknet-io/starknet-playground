@@ -7,6 +7,7 @@ import {ReactComponent as ProveIcon} from '../../../../assets/svg/prove-with-sha
 import {ReactComponent as DebugIcon} from '../../../../assets/svg/run-debug.svg';
 import {ReactComponent as StopIcon} from '../../../../assets/svg/stop.svg';
 import {AppContext} from '../../../../context/app/app-context';
+import {useWallet} from '../../../../context/wallet/wallet-hooks';
 import colors from '../../../../styles/colors.module.scss';
 import {EditorButton} from './EditorButton';
 import styles from './EditorButtons.module.scss';
@@ -34,6 +35,7 @@ const EditorButtons = ({
 }) => {
   const {color5, color5Hover} = colors;
   const {isCairoMode} = useContext(AppContext);
+  const {account} = useWallet();
   const buttons = {
     left: [
       isCairoMode
@@ -70,6 +72,7 @@ const EditorButtons = ({
       },
       {
         icon: DeployIcon,
+        isDisabled: !isCairoMode && !account,
         text: isCairoMode
           ? EDITOR_BTN_TXT.DEPLOY_ON_STARKNET
           : EDITOR_BTN_TXT.DEPLOY,
