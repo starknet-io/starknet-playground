@@ -1,0 +1,1 @@
+export const SUPPORTED_L2_CHAIN_ID = 'SN_GOERLI';

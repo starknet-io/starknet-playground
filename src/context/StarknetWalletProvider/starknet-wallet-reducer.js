@@ -1,12 +1,12 @@
 import {WalletStatus} from '@starkware-industries/commons-js-enums';
 
 export const actions = {
-  UPDATE_WALLET: 'Wallet/UPDATE_WALLET',
-  SET_WALLET_CONFIG: 'Wallet/SET_WALLET_CONFIG'
+  UPDATE_WALLET: 'StarknetWallet/UPDATE_WALLET'
 };
 
 export const initialState = {
   account: '',
+  isConnected: false,
   status: WalletStatus.DISCONNECTED,
   chainName: '',
   chainId: null,
@@ -21,13 +21,6 @@ export const reducer = (state, action) => {
         ...state,
         ...action.payload
       };
-
-    case actions.SET_WALLET_CONFIG:
-      return {
-        ...state,
-        config: action.payload
-      };
-
     default:
       return state;
   }

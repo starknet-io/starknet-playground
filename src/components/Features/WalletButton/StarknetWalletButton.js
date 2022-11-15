@@ -5,11 +5,11 @@ import {
 } from '@starkware-industries/commons-js-enums';
 import {addAddressPadding} from '@starkware-industries/commons-js-libs/starknet';
 import React from 'react';
-import {useWallet} from '../../../context/wallet/wallet-hooks';
+import {useStarknetWallet} from '../../../context/StarknetWalletProvider';
 import {NetworkWalletButton} from './NetworkWalletButton';
 
 export const StarknetWalletButton = () => {
-  const {account, config, error, status} = useWallet();
+  const {account, config, error, status} = useStarknetWallet();
 
   return (
     <NetworkWalletButton

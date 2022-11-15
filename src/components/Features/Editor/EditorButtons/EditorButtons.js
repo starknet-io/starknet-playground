@@ -6,8 +6,8 @@ import {ReactComponent as PlayIcon} from '../../../../assets/svg/play.svg';
 import {ReactComponent as ProveIcon} from '../../../../assets/svg/prove-with-sharp.svg';
 import {ReactComponent as DebugIcon} from '../../../../assets/svg/run-debug.svg';
 import {ReactComponent as StopIcon} from '../../../../assets/svg/stop.svg';
+import {useStarknetWallet} from '../../../../context/StarknetWalletProvider';
 import {AppContext} from '../../../../context/app/app-context';
-import {useWallet} from '../../../../context/wallet/wallet-hooks';
 import colors from '../../../../styles/colors.module.scss';
 import {EditorButton} from './EditorButton';
 import styles from './EditorButtons.module.scss';
@@ -35,7 +35,7 @@ const EditorButtons = ({
 }) => {
   const {color5, color5Hover} = colors;
   const {isCairoMode} = useContext(AppContext);
-  const {account} = useWallet();
+  const {account} = useStarknetWallet();
   const buttons = {
     left: [
       isCairoMode
