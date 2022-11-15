@@ -86,7 +86,9 @@ export const StarknetWalletProvider = ({children}) => {
       const {selectedAddress, name, icon} = getStarknet();
       updateWallet({
         account: selectedAddress,
-        status: WalletStatus.CONNECTED,
+        status: selectedAddress
+          ? WalletStatus.CONNECTED
+          : WalletStatus.DISCONNECTED,
         error: null,
         chainId,
         chainName: ChainInfo.L2[SUPPORTED_L2_CHAIN_ID].NAME,
