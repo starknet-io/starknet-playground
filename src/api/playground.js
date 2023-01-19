@@ -67,7 +67,11 @@ const prove = async code => {
 };
 
 const compile = async code => {
-  const data = {code, action: ActionTypes.COMPILE_CONTRACT};
+  const data = {
+    code,
+    action: ActionTypes.COMPILE_CONTRACT,
+    compressed: false
+  };
   const [response, error] = await apiRequest({
     path,
     method: 'POST',
@@ -78,7 +82,8 @@ const compile = async code => {
   }
   return {
     contractAddress: response.address,
-    contractDefinition: response.contract_definition
+    contractDefinition: response.contract_definition,
+    classHash: response.class_hash
   };
 };
 

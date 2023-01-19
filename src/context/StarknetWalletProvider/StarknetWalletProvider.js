@@ -4,12 +4,11 @@ import {
   WalletErrorType,
   WalletStatus
 } from '@starkware-industries/commons-js-enums';
+import {evaluate} from '@starkware-industries/commons-js-utils';
 import {
   connect as getStarknetWallet,
-  disconnect as resetStarknetWallet,
-  getStarknet
-} from '@starkware-industries/commons-js-libs/get-starknet';
-import {evaluate} from '@starkware-industries/commons-js-utils';
+  disconnect as resetStarknetWallet
+} from 'get-starknet';
 import PropTypes from 'prop-types';
 import React, {useReducer} from 'react';
 import {useConstants} from '../../hooks/useConstants';
@@ -41,13 +40,14 @@ export const StarknetWalletProvider = ({children}) => {
       }
       updateWallet({status: WalletStatus.CONNECTING});
       const enabled = await wallet
-        .enable(!AUTO_CONNECT && {showModal: true})
+        .enable({starknetVersion: 'v4'})
         .then(address => !!address?.length);
 
       if (enabled) {
-        updateAccount();
-        addAccountChangedListener();
+        updateAccount(wallet);
+        addAccountChangedListener(wallet);
       }
+      return wallet;
     } catch (ex) {
       updateWallet({
         status: WalletStatus.ERROR,
@@ -73,17 +73,17 @@ export const StarknetWalletProvider = ({children}) => {
     }
   };
 
-  const addAccountChangedListener = () => {
-    getStarknet().on('accountsChanged', () => {
+  const addAccountChangedListener = wallet => {
+    wallet.on('accountsChanged', () => {
       updateWallet({status: WalletStatus.DISCONNECTED});
       updateAccount();
     });
   };
 
-  const updateAccount = () => {
-    const chainId = getCurrentChainId();
+  const updateAccount = wallet => {
+    const chainId = getCurrentChainId(wallet);
     if (chainId === SUPPORTED_L2_CHAIN_ID) {
-      const {selectedAddress, name, icon} = getStarknet();
+      const {selectedAddress, name, icon} = wallet;
       updateWallet({
         account: selectedAddress,
         status: selectedAddress
@@ -110,8 +110,9 @@ export const StarknetWalletProvider = ({children}) => {
     }
   };
 
-  const getCurrentChainId = () => {
-    const {baseUrl} = getStarknet().provider;
+  const getCurrentChainId = wallet => {
+    const provider = wallet.provider.provider || wallet.provider;
+    const {baseUrl} = provider;
     if (baseUrl.includes('alpha-mainnet.starknet.io')) {
       return ChainTypeL2.MAIN;
     } else if (baseUrl.includes('alpha4.starknet.io')) {

@@ -295,10 +295,10 @@ const Editor = ({filePath}) => {
   };
 
   const doDeploy = async compileResponse => {
-    const {contractDefinition} = compileResponse;
+    const {contractDefinition, classHash} = compileResponse;
     program.addOutput(DEPLOYING_MSG);
     const [response, error] = await promiseHandler(
-      deploy(contractDefinition)
+      deploy(contractDefinition, classHash)
     );
     if (error) {
       DEPLOY_FAILED_MSG.push(error.message);
