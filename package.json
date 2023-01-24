@@ -44,8 +44,6 @@
   "dependencies": {
     "@starkware-industries/commons-js-components": "^1.1.0-dev.3",
     "@starkware-industries/commons-js-enums": "^1.2.0",
-    "@starkware-industries/commons-js-hooks": "^1.0.0",
-    "@starkware-industries/commons-js-libs": "^1.2.1",
     "@starkware-industries/commons-js-utils": "^1.2.1-dev.1",
     "codemirror": "^5.62.3",
     "get-starknet": "1.5.0",
