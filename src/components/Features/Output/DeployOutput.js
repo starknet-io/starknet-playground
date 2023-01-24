@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Links} from '../../../constants/links';
 
-const CONTRACT_URL = 'https://goerli.voyager.online/contract/';
-const TX_URL = 'https://goerli.voyager.online/tx/';
 const DEPLOY_MSG_PARTS = [
   'The deployment transaction was sent.',
   'Contract address:',
@@ -11,6 +10,8 @@ const DEPLOY_MSG_PARTS = [
 ];
 
 const DeployOutput = ({address, txHash}) => {
+  const {CONTRACT_URL, TX_URL} = Links;
+
   return (
     <>
       {'> '} {DEPLOY_MSG_PARTS[0]}

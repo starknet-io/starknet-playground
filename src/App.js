@@ -1,3 +1,4 @@
+import {StarknetWalletProvider} from '@starkware-industries/commons-js-components';
 import React, {useContext, useEffect} from 'react';
 import styles from './App.module.scss';
 import {Footer} from './components/Containers/Footer/Footer';
@@ -20,10 +21,12 @@ const App = () => {
 
   return (
     <div className={styles.app}>
-      <TabsProvider>
-        <Header />
-        <Main />
-      </TabsProvider>
+      <StarknetWalletProvider>
+        <TabsProvider>
+          <Header />
+          <Main />
+        </TabsProvider>
+      </StarknetWalletProvider>
       <Footer />
     </div>
   );

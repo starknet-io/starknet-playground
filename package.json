@@ -42,15 +42,25 @@
     ]
   },
   "dependencies": {
+    "@starkware-industries/commons-js-components": "^1.1.0-dev.3",
+    "@starkware-industries/commons-js-enums": "^1.2.0",
+    "@starkware-industries/commons-js-hooks": "^1.0.0",
+    "@starkware-industries/commons-js-libs": "^1.2.1",
+    "@starkware-industries/commons-js-utils": "^1.2.1-dev.1",
     "codemirror": "^5.62.3",
+    "get-starknet": "1.5.0",
     "js-logger": "^1.6.1",
     "react": "^17.0.2",
     "react-codemirror2": "^7.2.1",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "react-split-pane": "^2.0.3"
+    "react-split-pane": "^2.0.3",
+    "starknet": "^4.12.0"
   },
   "devDependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.12",
     "@semantic-release/changelog": "^6.0.0",
     "@semantic-release/commit-analyzer": "^9.0.1",
     "@semantic-release/git": "^10.0.0",

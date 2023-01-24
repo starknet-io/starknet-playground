@@ -13,6 +13,7 @@ import {TabsContext} from '../../../context/tabs/tabs-context';
 import {useLessons} from '../../../hooks/use-lessons';
 import {usePuzzles} from '../../../hooks/use-puzzles';
 import colors from '../../../styles/colors.module.scss';
+import {StarknetWalletButton} from '../../Features/StarknetWalletButton/StarknetWalletButton';
 import {Button} from '../../UI/Button/Button';
 import {DropdownMenuItem} from '../../UI/DropdownMenuItem/DropdownMenuItem';
 import styles from './Header.module.scss';
@@ -47,6 +48,7 @@ const Header = () => {
       <div className={styles.right}>
         <DocsButton />
         <DropdownButtons />
+        <StarknetWalletButton />
       </div>
     </header>
   );
