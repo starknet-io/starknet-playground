@@ -7,9 +7,9 @@ import {
   ChainTypeL2,
   NetworkType
 } from '@starkware-industries/commons-js-enums';
-import {addAddressPadding} from '@starkware-industries/commons-js-libs/starknet';
 import {evaluate} from '@starkware-industries/commons-js-utils';
 import React from 'react';
+import {addAddressPadding} from 'starknet';
 import {Links} from '../../../constants/links';
 
 export const StarknetWalletButton = () => {
