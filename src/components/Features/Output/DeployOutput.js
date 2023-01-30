@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Links} from '../../../constants/links';
+import {CONTRACT_URL, TX_URL} from '../../../constants/links';
 
 const DEPLOY_MSG_PARTS = [
   'The deployment transaction was sent.',
@@ -10,8 +10,6 @@ const DEPLOY_MSG_PARTS = [
 ];
 
 const DeployOutput = ({address, txHash}) => {
-  const {CONTRACT_URL, TX_URL} = Links;
-
   return (
     <>
       {'> '} {DEPLOY_MSG_PARTS[0]}

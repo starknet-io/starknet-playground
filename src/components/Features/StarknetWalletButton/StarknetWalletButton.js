@@ -10,10 +10,9 @@ import {
 import {evaluate} from '@starkware-industries/commons-js-utils';
 import React from 'react';
 import {addAddressPadding} from 'starknet';
-import {Links} from '../../../constants/links';
+import {CONTRACT_URL} from '../../../constants/links';
 
 export const StarknetWalletButton = () => {
-  const {CONTRACT_URL} = Links;
   const {account, config, error, status, connect, disconnect} =
     useStarknetWallet();
 
