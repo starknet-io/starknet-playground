@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <div className={styles.app}>
-      <StarknetWalletProvider>
+      <StarknetWalletProvider starknetVersion={'v4'}>
         <TabsProvider>
           <Header />
           <Main />

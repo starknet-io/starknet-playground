@@ -31,6 +31,13 @@ const ProgramProvider = ({children}) => {
     });
   };
 
+  const setIsDeployingHandler = isDeploying => {
+    dispatch({
+      type: actions.SET_IS_DEPLOYING,
+      payload: isDeploying
+    });
+  };
+
   const setIsDebuggingHandler = isDebugging => {
     dispatch({
       type: actions.SET_IS_DEBUGGING,
@@ -68,6 +75,7 @@ const ProgramProvider = ({children}) => {
   const context = {
     isRunning: state.isRunning,
     isDebugging: state.isDebugging,
+    isDeploying: state.isDeploying,
     currentStep: state.currentStep,
     trace: state.trace,
     memory: state.memory,
@@ -78,6 +86,7 @@ const ProgramProvider = ({children}) => {
     setEditorContent: setEditorContentHandler,
     setDebugResult: setDebugResultHandler,
     setIsRunning: setIsRunningHandler,
+    setIsDeploying: setIsDeployingHandler,
     setIsDebugging: setIsDebuggingHandler,
     setCurrentStep: setCurrentStepHandler,
     addOutput: addOutputHandler,

@@ -12,7 +12,7 @@ import {
   run
 } from '../../../api/playground';
 import {addJob} from '../../../api/sharp';
-import {deploy} from '../../../api/starknet';
+import {declareDeploy} from '../../../api/starknet';
 import {ProgramContext} from '../../../context/program/program-context';
 import {TabsContext} from '../../../context/tabs/tabs-context';
 import {promiseHandler} from '../../../utils/promise-handler';
@@ -283,6 +283,7 @@ const Editor = ({filePath}) => {
     setShowDeployModal(false);
     SendAnalyticsEvent(AnalyticsEventType.DEPLOY_CONTRACT, name);
     program.addOutput(COMPILING_MSG);
+    program.setIsDeploying(true);
     const [response, error] = await promiseHandler(
       compile(program.content)
     );
@@ -290,24 +291,28 @@ const Editor = ({filePath}) => {
       program.addOutput(error.message, true);
       program.setIsRunning(false);
     } else {
-      return doDeploy(response);
+      await doDeclareDeploy(response);
     }
+    program.setIsDeploying(false);
   };
 
-  const doDeploy = async compileResponse => {
-    const {contractDefinition} = compileResponse;
+  const doDeclareDeploy = async compileResponse => {
     program.addOutput(DEPLOYING_MSG);
     const [response, error] = await promiseHandler(
-      deploy(contractDefinition)
+      declareDeploy(compileResponse)
     );
     if (error) {
       DEPLOY_FAILED_MSG.push(error.message);
       program.addOutput(DEPLOY_FAILED_MSG, true);
       SendAnalyticsEvent(AnalyticsEventType.DEPLOY_ERROR, name);
     } else {
-      const {transactionHash, address} = response;
+      const {transactionHash, contractAddress} = response;
+
       program.addOutput(
-        <DeployOutput address={address} txHash={transactionHash} />
+        <DeployOutput
+          address={contractAddress}
+          txHash={transactionHash}
+        />
       );
       SendAnalyticsEvent(AnalyticsEventType.DEPLOY_SUCCESS, name);
     }
@@ -320,6 +325,7 @@ const Editor = ({filePath}) => {
         <Box title={EDITOR_TITLE_TXT}>
           <div className={styles.wrapper}>
             <EditorButtons
+              isDeploying={program.isDeploying}
               isRunning={program.isRunning}
               onCompile={compileHandler}
               onDebug={debugHandler}

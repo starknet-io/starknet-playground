@@ -1,28 +1,34 @@
-import {ActionTypes} from '../constants/action-types';
-import {generateRandomHex} from '../utils/generate-random-hex';
-import {apiRequest} from './api-request';
+import {promiseHandler} from '@starkware-industries/commons-js-utils';
+import {getStarknet} from 'get-starknet-core';
 
-const path = process.env.REACT_APP_STARKNET_ALPHA_SERVICE_URL;
+const getAccount = async () => {
+  const {account} = await getStarknet().getLastConnectedWallet();
+  return account;
+};
 
-const deploy = async contractDefinition => {
-  let data = {
-    type: ActionTypes.DEPLOY,
-    contract_address_salt: `0x${generateRandomHex(248 / 4)}`,
-    contract_definition: contractDefinition,
-    constructor_calldata: []
-  };
-  const [response, error] = await apiRequest({
-    path: `${path}/gateway/add_transaction`,
-    method: 'POST',
-    data
-  });
+const declareDeploy = async ({contract, classHash}) => {
+  const account = await getAccount();
+
+  const [response, error] = await promiseHandler(
+    account.declareDeploy({
+      contract,
+      classHash
+    })
+  );
+
   if (error) {
     return Promise.reject(error);
   }
+
+  const {
+    transaction_hash: transactionHash,
+    contract_address: contractAddress
+  } = response.deploy;
+
   return {
-    transactionHash: response.transaction_hash,
-    address: response.address
+    transactionHash,
+    contractAddress
   };
 };
 
-export {deploy};
+export {declareDeploy};
