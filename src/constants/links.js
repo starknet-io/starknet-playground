@@ -1,6 +1,2 @@
-const Links = {
-  CONTRACT_URL: 'https://goerli.voyager.online/contract/',
-  TX_URL: 'https://goerli.voyager.online/tx/'
-};
-
-export {Links};
+export const CONTRACT_URL = 'https://goerli.voyager.online/contract/';
+export const TX_URL = 'https://goerli.voyager.online/tx/';
