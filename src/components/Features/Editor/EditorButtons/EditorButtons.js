@@ -72,7 +72,7 @@ const EditorButtons = ({
       },
       {
         icon: DeployIcon,
-        isDisabled: !isCairoMode && !account,
+        isDisabled: !account,
         text: isCairoMode
           ? EDITOR_BTN_TXT.DEPLOY_ON_STARKNET
           : EDITOR_BTN_TXT.DEPLOY,
