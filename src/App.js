@@ -21,7 +21,9 @@ const App = () => {
 
   return (
     <div className={styles.app}>
-      <StarknetWalletProvider>
+      <StarknetWalletProvider
+        autoConnect={process.env.REACT_APP_AUTO_CONNECT}
+      >
         <TabsProvider>
           <Header />
           <Main />
