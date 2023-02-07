@@ -2309,10 +2309,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@starkware-industries/commons-js-components@^1.2.0-dev.6":
-  version "1.2.0-dev.6"
-  resolved "https://registry.yarnpkg.com/@starkware-industries/commons-js-components/-/commons-js-components-1.2.0-dev.6.tgz#cc1bded20c600f3f42a1fe389c8c0d08af8fb1c5"
-  integrity sha512-EJJqcry9h4I6UUyBZmBOzX95olf7l0qpav0nR4XKH+pUHrpyrglyrDTGx98hC65uPUpOG2L9ke1KN7eySSbztQ==
+"@starkware-industries/commons-js-components@^2.0.0-dev.1":
+  version "2.0.0-dev.1"
+  resolved "https://registry.yarnpkg.com/@starkware-industries/commons-js-components/-/commons-js-components-2.0.0-dev.1.tgz#5ed492020753634a47a610650948a61f1a1a8531"
+  integrity sha512-aDlobNPEODY7tkCZdUQxS1QJOk+VMnySRClZBHiaGhKDqruGX/mUR9Ya5+eLoAFKFNTd9OhVktNVhEo83KPSUw==
 
 "@starkware-industries/commons-js-enums@^1.2.0":
   version "1.2.0"
