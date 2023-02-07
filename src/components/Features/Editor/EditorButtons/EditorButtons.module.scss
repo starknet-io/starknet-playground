@@ -21,6 +21,10 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+
+    > button {
+      margin-right: 6px;
+    }
   }
 
   .right {

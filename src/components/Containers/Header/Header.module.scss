@@ -42,5 +42,9 @@
 
   .right {
     float: right;
+
+    & button {
+      margin-left: 6px;
+    }
   }
 }
