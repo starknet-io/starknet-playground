@@ -22,7 +22,7 @@ const App = () => {
   return (
     <div className={styles.app}>
       <StarknetWalletProvider
-        autoConnect={process.env.REACT_APP_AUTO_CONNECT}
+        autoConnect={process.env.REACT_APP_AUTO_CONNECT === 'true'}
         options={{starknetVersion: 'v4'}}
       >
         <TabsProvider>
