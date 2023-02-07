@@ -1,3 +1,17 @@
+## [0.1.0-dev.2](https://github.com/starkware-libs/cairo-playground/compare/v0.1.0-dev.1...v0.1.0-dev.2) (2023-02-07)
+
+
+### 🧩 Features
+
+* **3491503520:** Disable deploy if wallet is not connected ([#33](https://github.com/starkware-libs/cairo-playground/issues/33)) ([6c65b6e](https://github.com/starkware-libs/cairo-playground/commit/6c65b6e9dc5444c337f78ce74f1a14a88ab6784f))
+
+## [0.1.0-dev.1](https://github.com/starkware-libs/cairo-playground/compare/v0.0.8...v0.1.0-dev.1) (2023-02-07)
+
+
+### 🧩 Features
+
+* **3416039642:** Add "Connect Wallet" functionality ([#32](https://github.com/starkware-libs/cairo-playground/issues/32)) ([45c28dd](https://github.com/starkware-libs/cairo-playground/commit/45c28ddd2632a8204dca356f9da2e2699a6a041a))
+
 ## [0.0.8](https://github.com/starkware-libs/cairo-playground/compare/v0.0.7...v0.0.8) (2022-10-11)
 
 

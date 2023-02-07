@@ -17,10 +17,6 @@ export const StarknetWalletButton = () => {
   const {account, config, error, status, connect, disconnect} =
     useStarknetWallet();
 
-  const handleConnect = () => {
-    connect({include: ['argentX']});
-  };
-
   return (
     <div className={styles.starknetWalletButton}>
       <WalletButton
@@ -37,7 +33,7 @@ export const StarknetWalletButton = () => {
         }}
         network={NetworkType.L2}
         status={status}
-        onClick={handleConnect}
+        onClick={connect}
       />
     </div>
   );
