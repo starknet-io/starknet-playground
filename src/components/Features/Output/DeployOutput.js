@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {CONTRACT_URL, TX_URL} from '../../../constants/links';
 
-const CONTRACT_URL = 'https://goerli.voyager.online/contract/';
-const TX_URL = 'https://goerli.voyager.online/tx/';
 const DEPLOY_MSG_PARTS = [
   'The deployment transaction was sent.',
   'Contract address:',

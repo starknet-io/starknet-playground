@@ -1,0 +1,11 @@
+@import '../../../index';
+
+.starknetWalletButton {
+  display: inline-flex;
+  flex-direction: row;
+
+  button,
+  div {
+    font: $--button1-font;
+  }
+}
