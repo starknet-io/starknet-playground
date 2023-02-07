@@ -1,7 +1,8 @@
+import {PG_SERVICE_URL} from '../config/envs';
 import {ActionTypes} from '../constants/action-types';
 import {apiRequest} from './api-request';
 
-const path = process.env.REACT_APP_PG_SERVICE_URL;
+const path = PG_SERVICE_URL;
 
 const format = async code => {
   const data = {code, action: ActionTypes.FORMAT};
