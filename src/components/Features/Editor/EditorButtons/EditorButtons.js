@@ -1,3 +1,4 @@
+import {useStarknetWallet} from '@starkware-industries/commons-js-components';
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
 import {ReactComponent as FormatIcon} from '../../../../assets/svg/auto-format.svg';
@@ -34,6 +35,7 @@ const EditorButtons = ({
 }) => {
   const {color5, color5Hover} = colors;
   const {isCairoMode} = useContext(AppContext);
+  const {account} = useStarknetWallet();
   const buttons = {
     left: [
       isCairoMode
@@ -70,6 +72,7 @@ const EditorButtons = ({
       },
       {
         icon: DeployIcon,
+        isDisabled: !account,
         text: isCairoMode
           ? EDITOR_BTN_TXT.DEPLOY_ON_STARKNET
           : EDITOR_BTN_TXT.DEPLOY,
