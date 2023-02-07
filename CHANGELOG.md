@@ -1,3 +1,10 @@
+## [0.1.0-dev.1](https://github.com/starkware-libs/cairo-playground/compare/v0.0.8...v0.1.0-dev.1) (2023-02-07)
+
+
+### 🧩 Features
+
+* **3416039642:** Add "Connect Wallet" functionality ([#32](https://github.com/starkware-libs/cairo-playground/issues/32)) ([45c28dd](https://github.com/starkware-libs/cairo-playground/commit/45c28ddd2632a8204dca356f9da2e2699a6a041a))
+
 ## [0.0.8](https://github.com/starkware-libs/cairo-playground/compare/v0.0.7...v0.0.8) (2022-10-11)
 
 
