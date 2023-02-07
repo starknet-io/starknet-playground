@@ -1,8 +1,9 @@
+import {STARKNET_ALPHA_SERVICE_URL} from '../config/envs';
 import {ActionTypes} from '../constants/action-types';
 import {generateRandomHex} from '../utils/generate-random-hex';
 import {apiRequest} from './api-request';
 
-const path = process.env.REACT_APP_STARKNET_ALPHA_SERVICE_URL;
+const path = STARKNET_ALPHA_SERVICE_URL;
 
 const deploy = async contractDefinition => {
   let data = {
