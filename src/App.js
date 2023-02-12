@@ -22,7 +22,10 @@ const App = () => {
 
   return (
     <div className={styles.app}>
-      <StarknetWalletProvider autoConnect={AUTO_CONNECT}>
+      <StarknetWalletProvider
+        autoConnect={AUTO_CONNECT}
+        options={{starknetVersion: 'v4'}}
+      >
         <TabsProvider>
           <Header />
           <Main />

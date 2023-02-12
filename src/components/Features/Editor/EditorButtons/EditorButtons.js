@@ -25,6 +25,7 @@ const EDITOR_BTN_TXT = {
 
 const EditorButtons = ({
   isRunning,
+  isDeploying,
   onRun,
   onCompile,
   onDebug,
@@ -72,7 +73,7 @@ const EditorButtons = ({
       },
       {
         icon: DeployIcon,
-        isDisabled: !account,
+        isDisabled: isDeploying || !account,
         text: isCairoMode
           ? EDITOR_BTN_TXT.DEPLOY_ON_STARKNET
           : EDITOR_BTN_TXT.DEPLOY,
@@ -131,6 +132,7 @@ const EditorButtons = ({
 
 EditorButtons.propTypes = {
   isRunning: PropTypes.bool,
+  isDeploying: PropTypes.bool,
   onRun: PropTypes.func,
   onCompile: PropTypes.func,
   onDebug: PropTypes.func,

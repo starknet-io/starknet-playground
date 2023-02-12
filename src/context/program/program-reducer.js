@@ -2,6 +2,7 @@ const actions = {
   SET_EDITOR_CONTENT: 'Program/SET_EDITOR_CONTENT',
   SET_DEBUG_RESULT: 'PROGRAM/SET_DEBUG_RESULT',
   SET_IS_RUNNING: 'Program/SET_IS_RUNNING',
+  SET_IS_DEPLOYING: 'Program/SET_IS_DEPLOYING',
   SET_IS_DEBUGGING: 'Program/SET_IS_DEBUGGING',
   SET_CURRENT_STEP: 'Program/SET_CURRENT_STEP',
   ADD_OUTPUT: 'Program/ADD_OUTPUT',
@@ -11,6 +12,7 @@ const actions = {
 const initialState = {
   isRunning: false,
   isDebugging: false,
+  isDeploying: false,
   currentStep: -1,
   content: '',
   trace: [],
@@ -38,6 +40,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         isRunning: action.payload
+      };
+
+    case actions.SET_IS_DEPLOYING:
+      return {
+        ...state,
+        isDeploying: action.payload
       };
 
     case actions.SET_IS_DEBUGGING:

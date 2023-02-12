@@ -6,6 +6,7 @@ const ProgramContext = createContext({
   setEditorContent: () => {},
   setDebugResult: () => {},
   setIsRunning: () => {},
+  setIsDeploying: () => {},
   setIsDebugging: () => {},
   setCurrentStep: () => {},
   addOutput: () => {},
