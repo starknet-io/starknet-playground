@@ -1,3 +1,10 @@
+## [0.1.0-dev.3](https://github.com/starkware-libs/cairo-playground/compare/v0.1.0-dev.2...v0.1.0-dev.3) (2023-02-12)
+
+
+### 🧩 Features
+
+* **3415968370:** New deploy transaction ([#34](https://github.com/starkware-libs/cairo-playground/issues/34)) ([f5ccff8](https://github.com/starkware-libs/cairo-playground/commit/f5ccff8795e82a04be59e0fd0e6c8f1366284fc8))
+
 ## [0.1.0-dev.2](https://github.com/starkware-libs/cairo-playground/compare/v0.1.0-dev.1...v0.1.0-dev.2) (2023-02-07)
 
 
