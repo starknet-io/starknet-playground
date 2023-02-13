@@ -45,7 +45,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.10.12",
-    "@starkware-industries/commons-js-components": "^2.0.0-dev.1",
+    "@starkware-industries/commons-js-components": "^2.0.0-dev.4",
     "@starkware-industries/commons-js-enums": "^1.2.0",
     "@starkware-industries/commons-js-utils": "^1.2.1-dev.1",
     "codemirror": "^5.62.3",
