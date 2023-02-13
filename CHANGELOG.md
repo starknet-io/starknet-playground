@@ -1,3 +1,14 @@
+## [1.0.0-dev.1](https://github.com/starkware-libs/cairo-playground/compare/v0.1.0-dev.3...v1.0.0-dev.1) (2023-02-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* `commons-js-components` uses `get-starkent v2.0.0`
+
+### 🧩 Features
+
+* upgrade commons-js-components ([#35](https://github.com/starkware-libs/cairo-playground/issues/35)) ([b1edadc](https://github.com/starkware-libs/cairo-playground/commit/b1edadcaed7872aee7d761208a1c034c7356d691))
+
 ## [0.1.0-dev.3](https://github.com/starkware-libs/cairo-playground/compare/v0.1.0-dev.2...v0.1.0-dev.3) (2023-02-12)
 
 
