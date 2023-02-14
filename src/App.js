@@ -1,4 +1,6 @@
 import {StarknetWalletProvider} from '@starkware-industries/commons-js-components';
+import {connect, disconnect} from 'get-starknet';
+import {getStarknet} from 'get-starknet-core';
 import React, {useContext, useEffect} from 'react';
 import styles from './App.module.scss';
 import {Footer} from './components/Containers/Footer/Footer';
@@ -24,6 +26,7 @@ const App = () => {
     <div className={styles.app}>
       <StarknetWalletProvider
         autoConnect={AUTO_CONNECT}
+        getLibrary={() => ({connect, disconnect, getStarknet})}
         options={{starknetVersion: 'v4'}}
       >
         <TabsProvider>
