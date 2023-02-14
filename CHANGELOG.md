@@ -1,3 +1,10 @@
+## [1.0.0-dev.2](https://github.com/starkware-libs/cairo-playground/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2023-02-14)
+
+
+### 🔧 Fixes
+
+* use chainName from useStarknetWallet ([#36](https://github.com/starkware-libs/cairo-playground/issues/36)) ([65ee189](https://github.com/starkware-libs/cairo-playground/commit/65ee189966576fa96e2ffc8711cf76388574e436))
+
 ## [1.0.0-dev.1](https://github.com/starkware-libs/cairo-playground/compare/v0.1.0-dev.3...v1.0.0-dev.1) (2023-02-13)
 
 
