@@ -1,3 +1,10 @@
+## [1.0.0-dev.3](https://github.com/starkware-libs/cairo-playground/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2023-02-15)
+
+
+### 🧩 Features
+
+* pass get-starknet to StarknetWalletProvider ([#37](https://github.com/starkware-libs/cairo-playground/issues/37)) ([76c706c](https://github.com/starkware-libs/cairo-playground/commit/76c706ca2994172f5f14ed5c70e23b6ae26097a8))
+
 ## [1.0.0-dev.2](https://github.com/starkware-libs/cairo-playground/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2023-02-14)
 
 
