@@ -1,3 +1,10 @@
+## [1.0.0-dev.4](https://github.com/starkware-libs/cairo-playground/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2023-02-16)
+
+
+### 🧩 Features
+
+* upgrade dependencies ([#38](https://github.com/starkware-libs/cairo-playground/issues/38)) ([1abc7e7](https://github.com/starkware-libs/cairo-playground/commit/1abc7e7857415b4223565c1ea4f6926d46c15198))
+
 ## [1.0.0-dev.3](https://github.com/starkware-libs/cairo-playground/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2023-02-15)
 
 
