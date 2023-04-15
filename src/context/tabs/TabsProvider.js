@@ -18,6 +18,14 @@ const TabsProvider = ({children}) => {
     dispatch({type: actions.REMOVE_TAB, payload: id});
   };
 
+  const editTabNameHandler = (id, name) => {
+    dispatch({type: actions.EDIT_TAB_NAME, payload: {id, name}});
+  };
+
+  const setTabEditableHandler = id => {
+    dispatch({type: actions.SET_TAB_NAME_EDITABLE, payload: id});
+  };
+
   const setTabActiveHandler = id => {
     const tab = getTabById(id);
     setParam(tab.type, tab.file);
@@ -31,11 +39,14 @@ const TabsProvider = ({children}) => {
   const context = {
     tabs: state.tabs,
     activeTabId: state.activeTabId,
+    editableTabNameId: state.editableTabNameId,
     tabsCount: state.tabsCount,
     removeTab: removeTabHandler,
     setTabActive: setTabActiveHandler,
     addTab: addTabHandler,
-    getActiveTab: getActiveTabHandler
+    getActiveTab: getActiveTabHandler,
+    setTabEditable: setTabEditableHandler,
+    editTabName: editTabNameHandler
   };
 
   return (

@@ -6,7 +6,8 @@ const TabsContext = createContext({
   removeTab: () => {},
   setTabActive: () => {},
   addTab: () => {},
-  getActiveTab: () => {}
+  getActiveTab: () => {},
+  setTabEditable: () => {}
 });
 
 export {TabsContext};

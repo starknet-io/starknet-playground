@@ -97,6 +97,34 @@ const Main = () => {
     });
   };
 
+  const setTabEditableHandler = id => {
+    tabs.setTabEditable(id);
+  };
+
+  const handleTabTitleClick = (id, event) => {
+    switch (event.detail) {
+      case 1:
+        if (tabs.activeTabId !== id) {
+          setTabEditableHandler(null);
+        }
+        setTabActiveHandler(id);
+        break;
+      case 2:
+        setTabActiveHandler(id);
+        setTabEditableHandler(id);
+        break;
+      default:
+        return;
+    }
+  };
+
+  const handleTabTitleBlur = (id, newTabName, prevTabName) => {
+    setTabEditableHandler(null);
+    if (newTabName && newTabName !== prevTabName) {
+      tabs.editTabName(id, newTabName);
+    }
+  };
+
   const renderEmptyScreen = () => {
     return (
       <div className={styles.emptyContainer}>
@@ -123,8 +151,12 @@ const Main = () => {
       <NavItem
         key={index}
         isActive={tabs.activeTabId === tab.id}
+        isEditable={tabs.editableTabNameId === tab.id}
         text={tab.name}
-        onClick={() => setTabActiveHandler(tab.id)}
+        onBlur={tabNewName =>
+          handleTabTitleBlur(tab.id, tabNewName, tab.name)
+        }
+        onClick={e => handleTabTitleClick(tab.id, e)}
         onDelete={e => removeTabHandler(e, tab.id)}
       />
     ));
